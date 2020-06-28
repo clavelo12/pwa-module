@@ -1,0 +1,237 @@
+<!-- Created by Stéphane -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calci</title>
+    <meta charset="utf-8">
+    <meta name="calc" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        function click1(){
+            document.calc.disp.value+=1;
+    }
+        function click2(){
+            document.calc.disp.value+=2;
+    }
+        function click3(){
+            document.calc.disp.value+=3;
+    }
+        function click4(){
+            document.calc.disp.value+=4;
+    }
+        function click5(){
+            document.calc.disp.value+=5;
+    }
+
+        function click6(){
+            document.calc.disp.value+=6;
+    }
+
+        function click7(){
+            document.calc.disp.value+=7;
+    }
+
+        function click8(){
+            document.calc.disp.value+=8;
+    }
+        function click9(){
+            document.calc.disp.value+=9;
+    }
+
+
+        function click0(){
+            document.calc.disp.value+=0;
+    }
+        function add(){
+            document.calc.disp.value+="+";
+        }
+        function sub(){
+            document.calc.disp.value+="-";
+        }
+        function mul(){
+            document.calc.disp.value+="*";
+        }
+        function div(){
+            document.calc.disp.value+="/";
+        }
+        function equal(){
+            if(document.calc.disp.value==""){
+                var eq="";
+            }
+            else{
+                var eq=eval(document.calc.disp.value)
+            }
+            document.calc.disp.value=eq;
+        }
+        function deci(){
+            document.calc.disp.value+=".";
+        }
+        function per(){
+            document.calc.disp.value+="%";
+        }
+        function par1(){
+            document.calc.disp.value+="(";
+        }
+        function par2(){
+            document.calc.disp.value+=")";
+        }
+        function AC(){
+            document.calc.disp.value="";
+        }
+
+
+    </script>
+    <style>
+    .nums2{
+        width:20%;
+        
+        margin:0.2%;
+        align-self:center;
+        margin-bottom:10px;
+        background-color:#ffffff;
+        border-radius:8px;
+        border-color:#3399ff; 
+        border-width:4.3px; 
+        color:#3399ff;
+
+    }
+     .nums5{
+        width:20%;
+        
+        margin:0.2%;
+        align-self:center;
+        margin-bottom:10px;
+        background-color:#ffc34d;
+        border-radius:8px;
+        border-color:#ffc34d;
+        border-width:4.3px; 
+        color:#ffffff;
+
+    }
+    .nums1{
+        width:20%;
+        
+        margin:0.2%;
+        align-self:center;
+        margin-bottom:10px;
+        margin-left:8%; 
+        background-color:#ffffff; 
+        border-radius:8px;
+        border-color:#3399ff; 
+        border-width:4.3px; 
+        color:#3399ff;
+
+    }
+    .nums3{
+            width:20%;
+        
+        margin:0.2%;
+        align-self:center;
+        margin-bottom:10px;
+        background-color:#3399ff;
+        border-radius:8px;
+        border-color:#ffffff;
+        border-width:4.3px;  
+        color:#ffffff;
+
+    }
+     .nums4{
+            width:20%;
+        
+        margin:0.2%;
+        align-self:center;
+        margin-bottom:10px;
+        background-color:red;
+        border-radius:8px;
+        border-color:red; 
+        border-width:4.3px;
+        color:#ffffff;
+
+    }
+      .nums12{
+        width:20%;
+        
+        margin:0.2%;
+        align-self:center;
+        margin-bottom:10px;
+        margin-left:8%; 
+        background-color:#3399ff; 
+        border-radius:8px;
+        border-color:#ffffff; 
+        border-width:4.3px; 
+        color:#ffffff;
+
+
+    }
+
+    .back{
+        background-color:#262626;
+        width:65% ;
+        border-radius: 10px;
+        display: inline-block;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-left:18%;
+        margin-top:23%;  
+        
+
+    }
+    input[type=text]{
+        width:83.66%;
+        font-size:28px; 
+        margin-top:15px;
+        margin-bottom:20px;
+        margin-left:8%; 
+        border-radius:10px;
+        border-color:#3399ff;   
+        
+    }
+   
+</style>
+</head>
+<body>
+<form name="calc">
+    <div class="back">
+        
+    <input type="text" name="disp" id="disp" value=""><br>
+        
+    <input type="button" class="nums12" value="(" onclick="par1()">
+    <input type="button" class="nums3" value=")" onclick="par2()">
+    <input type="button" class="nums3" value="%" onclick="per()">
+    <input type="button" class="nums4" value="AC" onclick="AC()"><br>
+    <input type="button" class="nums1" value="7" onclick="click7()">
+    <input type="button" class="nums2" value="8" onclick="click8()">
+    <input type="button" class="nums2" value="9" onclick="click9()">
+    <input type="button" class="nums3" value="/" onclick="div()"><br>
+    <input type="button" class="nums1" value="4" onclick="click4()">
+    <input type="button" class="nums2" value="5" onclick="click5()">
+    <input type="button" class="nums2" value="6" onclick="click6()">
+    <input type="button" class="nums3" value="*" onclick="mul()"><br>
+    <input type="button" class="nums1" value="1" onclick="click1()">
+    <input type="button" class="nums2" value="2" onclick="click2()">
+    <input type="button" class="nums2" value="3" onclick="click3()">
+    <input type="button" class="nums3" value="-" onclick="sub()"><br>
+    <input type="button" class="nums1" value="0" onclick="click0()">
+    <input type="button" class="nums3" value="." onclick="deci()">
+    <input type="button" class="nums5" value="=" onclick="equal()">
+    <input type="button" class="nums3" value="+" onclick="add()">
+    </div>
+    
+
+    
+    
+    
+    
+    
+    
+
+
+
+
+</form>
+</body>
+</html>
